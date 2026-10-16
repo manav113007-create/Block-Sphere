@@ -37,8 +37,7 @@ Push the repo to GitHub, import it on Vercel or Netlify, and accept the detected
 - Use cases are real, named examples instead of generic icon cards.
 
 ## AI tools used
-Claude was used to help draft and give basic ideas, every designing and addding extra feature is done by me.
-Chat gpt is used for judgement.
+Claude drafted the code and ideas, ChatGPT was used for review, and I  tested, adjusted, extended, created new things , improvised extensively and made it and lastly deployed it.
 ## Bonus features
 Basic Cards
 animation on blocks 
