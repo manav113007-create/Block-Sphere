@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlockSphere | Learn Blockchain</title>
+    <meta name="description" content="Learn blockchain by building and breaking one with the Blockchain RBU Chapter.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="nav">
+        <div class="wrap">
+
+            <a class="logo" href="#top">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <rect x="2" y="2" width="22" height="22" rx="6" fill="#2b3ff0"/>
+                    <rect x="8" y="8" width="10" height="10" rx="2" fill="#ffd23f"/>
+                </svg>
+                BlockSphere
+            </a>
+
+            <button class="burger" aria-expanded="false" aria-controls="menu">
+                Menu
+            </button>
+
+            <nav id="menu">
+                <a href="#lab">What is it</a>
+                <a href="#concepts">Key ideas</a>
+                <a href="#uses">Real uses</a>
+                <a href="#lab" class="btn sm">Try it</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="top">
+
+        <!-- Hero Section -->
+        <section class="hero wrap">
+
+            <div>
+                <h1>A notebook everyone shares and nobody can quietly rewrite.</h1>
+
+                <p class="lead">
+                    Blockchain is a way of keeping records so that changing
+                    the past becomes noticeable. Learn how it works by
+                    building one and experimenting with it yourself.
+                </p>
+
+                <div class="ctas">
+                    <a class="btn" href="#lab">Build a chain</a>
+                    <a class="btn ghost" href="#concepts">Learn the basics</a>
+                </div>
+            </div>
+
+            <!-- Animated Blockchain Illustration -->
+            <div class="stack" aria-hidden="true">
+
+                <div class="hb" style="--i:0">
+                    <b>Block 1</b>
+                    <code>00a3f9c1e7…</code>
+                </div>
+
+                <div class="hb" style="--i:1">
+                    <b>Block 2</b>
+                    <code>00d41b88a2…</code>
+                </div>
+
+                <div class="hb" style="--i:2">
+                    <b>Block 3</b>
+                    <code>0079e0c35f…</code>
+                </div>
+
+                <div class="hb next" style="--i:3">
+                    <b>Block 4</b>
+                    <code>mining…</code>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Interactive Blockchain Lab -->
+        <section id="lab" class="dark">
+            <div class="wrap">
+
+                <h2>Blockchain in plain words</h2>
+
+                <p class="lead">
+                    Each block contains records and a unique fingerprint
+                    called a hash. Every block also connects to the previous
+                    one. Change the data, and the chain can become invalid.
+                    Try it yourself in the interactive lab below.
+                </p>
+
+                <div id="lab-root"></div>
+
+            </div>
+        </section>
+
+
+        <!-- Key Concepts -->
+        <section id="concepts" class="wrap">
+
+            <h2>Four ideas worth knowing</h2>
+
+            <div class="split">
+
+                <div class="tabs" role="tablist">
+
+                    <button role="tab" data-k="decentralization" aria-selected="true">
+                        Decentralization
+                    </button>
+
+                    <button role="tab" data-k="transparency" aria-selected="false">
+                        Transparency
+                    </button>
+
+                    <button role="tab" data-k="contracts" aria-selected="false">
+                        Smart contracts
+                    </button>
+
+                    <button role="tab" data-k="web3" aria-selected="false">
+                        Web3
+                    </button>
+
+                </div>
+
+                <div id="panel" class="panel" role="tabpanel"></div>
+
+            </div>
+        </section>
+
+
+        <!-- Real-World Applications -->
+        <section id="uses" class="wrap">
+
+            <h2>Where blockchain is used</h2>
+
+            <p class="lead">
+                Blockchain can help different parties share and verify records.
+                Here are a few examples of where it may be useful.
+            </p>
+
+            <div class="uses">
+
+                <details name="use-cases" open>
+                    <summary>Student certificates</summary>
+                    <p>
+                        Digital credentials can be verified online,
+                        helping employers check whether a certificate is genuine.
+                    </p>
+                </details>
+
+                <details name="use-cases">
+                    <summary>Food supply chains</summary>
+                    <p>
+                        Shared records can help businesses trace food
+                        from farms to shops.
+                    </p>
+                </details>
+
+                <details name="use-cases">
+                    <summary>Land records</summary>
+                    <p>
+                        Blockchain can help maintain shared records of
+                        property transactions, subject to local laws.
+                    </p>
+                </details>
+
+                <details name="use-cases">
+                    <summary>Medicine tracking</summary>
+                    <p>
+                        Supply-chain records can help track medicines
+                        and identify inconsistencies.
+                    </p>
+                </details>
+
+                <details name="use-cases">
+                    <summary>Sending money abroad</summary>
+                    <p>
+                        Some blockchain networks support international
+                        transfers, although fees and regulations vary.
+                    </p>
+                </details>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrap">
+
+            <div>
+                <div class="logo">
+                    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                        <rect x="2" y="2" width="22" height="22" rx="6" fill="#ffd23f"/>
+                        <rect x="8" y="8" width="10" height="10" rx="2" fill="#0a1033"/>
+                    </svg>
+                    BlockSphere
+                </div>
+
+                <p>Made by the Blockchain RBU Chapter to help beginners learn by doing.</p>
+            </div>
+
+            <nav>
+                <a href="#lab">What is it</a>
+                <a href="#concepts">Key ideas</a>
+                <a href="#uses">Real uses</a>
+                <a href="#top">Back to top</a>
+            </nav>
+
+        </div>
+    </footer>
+
+    <!-- Website functionality -->
+    <script type="module" src="./lab.jsx"></script>
+    <script type="module" src="./script.js"></script>
+
+</body>
+</html>

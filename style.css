@@ -1,0 +1,82 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --ink: #0a1033; --blue: #2b3ff0; --bg: #eef1f6; --sun: #ffd23f; --ok: #12b886; --bad: #ef4444; }
+
+body { font: 1rem/1.6 'Bricolage Grotesque', sans-serif; background: var(--bg); color: var(--ink); }
+.wrap { max-width: 1120px; margin: auto; padding: 1rem; }
+section { padding: 4rem 0; }
+h1, h2, h3 { line-height: 1.1; }
+a { color: inherit; }
+
+/* Navigation */
+.nav { position: sticky; top: 0; background: #eef1f6ee; border-bottom: 2px solid var(--ink); z-index: 10; }
+.nav .wrap, footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+#menu, footer nav, .ctas { display: flex; gap: 1rem; }
+#menu a { text-decoration: none; }
+.burger { display: none; }
+
+/* Buttons */
+.btn { padding: .7rem 1rem; border: 2px solid var(--ink); border-radius: 10px; background: var(--blue); color: white; cursor: pointer; text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--ink); }
+
+/* Hero blocks */
+.hero, .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.stack { position: relative; height: 450px; }
+.hb {
+  position: absolute; top: calc(var(--i) * 24%); left: calc(var(--i) * 12%);
+  width: 65%; padding: 1rem; border: 3px solid var(--ink);
+  border-radius: 14px; background: var(--blue); color: white;
+  box-shadow: 5px 5px var(--ink);
+  animation: drop .8s calc(var(--i) * .4s) both;
+}
+.hb.next { background: var(--sun); color: var(--ink); }
+.hb::before {
+  content: ''; position: absolute; inset: -10px; z-index: -1;
+  background: var(--sun); filter: blur(18px);
+  animation: glow 2s infinite alternate;
+}
+.hb:not(:last-child)::after {
+  content: ''; position: absolute; top: 100%; left: 4rem;
+  width: 6px; height: 2rem; background: var(--sun);
+}
+@keyframes drop { from { transform: translateY(-80px); opacity: 0; } to { opacity: 1; } }
+@keyframes glow { from { opacity: 0; } to { opacity: .7; } }
+
+/* Blockchain lab */
+.dark, footer { background: var(--ink); color: white; }
+.chain { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.blk { padding: 1rem; border: 3px solid var(--ok); border-radius: 12px; background: white; color: var(--ink); }
+.blk.bad { border-color: var(--bad); }
+.badge { padding: .2rem .5rem; background: var(--ok); color: white; }
+.bad .badge { background: var(--bad); }
+.blk input { width: 100%; padding: .5rem; }
+.status { margin-top: 1rem; }
+
+/* Concepts */
+.tabs { display: flex; flex-direction: column; gap: .5rem; }
+.tabs button { padding: .7rem; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--sun); }
+.panel { padding: 1.5rem; border: 3px solid var(--ink); border-radius: 12px; background: white; }
+.demo { display: grid; gap: 1rem; margin-top: 1rem; }
+.nodes { display: flex; gap: .5rem; }
+.node { width: 45px; height: 45px; border-radius: 50%; background: var(--ok); cursor: pointer; }
+.node.off { background: #ccc; }
+.ledger { font: .8rem monospace; overflow-wrap: anywhere; }
+.out { font-weight: 600; }
+
+/* Real-world uses and footer */
+.uses details { border-top: 2px solid var(--ink); padding: 1rem 0; }
+.uses summary { cursor: pointer; font-weight: bold; }
+footer { padding: 2rem 0; }
+
+/* Mobile */
+@media (max-width: 760px) {
+  .hero, .split, .chain { grid-template-columns: 1fr; }
+  .burger { display: block; }
+  #menu { display: none; position: absolute; top: 64px; left: 0; padding: 1rem; background: var(--bg); flex-direction: column; }
+  #menu.open { display: flex; }
+  .tabs { flex-direction: row; overflow-x: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; }
+}
